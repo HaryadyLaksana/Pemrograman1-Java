@@ -1,12 +1,44 @@
-# NetBeans
+# =========================
+# NetBeans Java Project
+# =========================
+
+# Build results
 build/
 dist/
-nbproject/private/
+nbbuild/
+nbdist/
+nbactions.xml
 
 # Compiled files
 *.class
 *.jar
+*.war
+*.ear
 
-# OS files
+# NetBeans private config (LOCAL ONLY)
+nbproject/private/
+
+# Logs & temporary files
+*.log
+*.tmp
+*.bak
+
+# OS generated files
 .DS_Store
 Thumbs.db
+
+# =========================
+# Optional (uncomment if needed)
+# =========================
+
+# If using packaged outputs
+# target/
+
+# If using Maven wrapper
+# .mvn/
+# mvnw
+# mvnw.cmd
+
+# If using Gradle
+# .gradle/
+# build/
