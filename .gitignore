@@ -1,12 +1,17 @@
-# NetBeans - recursive
-**/build/
-**/dist/
-**/nbbuild/
-**/nbdist/
+# NetBeans project files
+nbproject/private/
 
-# Compiled
+# Build output
+build/
+dist/
+nbbuild/
+nbdist/
+
+# Compiled files
 *.class
 *.jar
+*.war
 
-# NetBeans private
-**/nbproject/private/
+# OS files
+.DS_Store
+Thumbs.db
