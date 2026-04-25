@@ -1,5 +1,8 @@
 package Tugas;
 
+import java.text.NumberFormat;
+import java.util.Locale;
+
 
 public class Tugas1 extends javax.swing.JFrame {
     
@@ -36,6 +39,9 @@ public class Tugas1 extends javax.swing.JFrame {
         buttonGroup13 = new javax.swing.ButtonGroup();
         buttonGroup14 = new javax.swing.ButtonGroup();
         buttonGroup15 = new javax.swing.ButtonGroup();
+        jPanel1 = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
+        jPanel3 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         txtOutput = new javax.swing.JTextArea();
         rbRegular = new javax.swing.JRadioButton();
@@ -56,6 +62,41 @@ public class Tugas1 extends javax.swing.JFrame {
         txtJumlah = new javax.swing.JTextField();
         btnProses = new javax.swing.JButton();
         lblHasil = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -70,41 +111,64 @@ public class Tugas1 extends javax.swing.JFrame {
         rbRegular.setText("Regular");
         rbRegular.addActionListener(this::rbRegularActionPerformed);
 
-        cbMatch.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Chelsea vs Liverpool", "Chelsea vs Arsenal", "Chelsea vs Manchester United" }));
+        cbMatch.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Chelsea vs Liverpool (BIG MATCH)", "Manchester United vs Arsenal (BIG MATCH)", "Tottenham Hotspur vs Manchester City (BIG MATCH)", "Fulham vs Wolverhampton Wanderers", "Brentford vs Everton" }));
         cbMatch.addActionListener(this::cbMatchActionPerformed);
 
-        cbSeat.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1. Tribune A", "2. Tribune B", "3. VIP", "4. VVIP" }));
+        txtNama.addActionListener(this::txtNamaActionPerformed);
+
+        cbSeat.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1. Tribun Utara", "2. Tribun Selatan", "3. Tribun Supporter", "4. VIP" }));
         cbSeat.addActionListener(this::cbSeatActionPerformed);
 
         buttonGroup1.add(rbVIP);
         rbVIP.setText("VIP");
         rbVIP.addActionListener(this::rbVIPActionPerformed);
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel1.setBackground(new java.awt.Color(102, 102, 255));
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(102, 102, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("SISTEM PEMESANAN TIKET CHELSEA FC");
+        jLabel1.setText("SISTEM PEMESANAN TIKET LIGA INGGRIS");
 
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel2.setText("Alamat");
 
+        txtAlamat.addActionListener(this::txtAlamatActionPerformed);
+
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel3.setText("Nama");
 
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel4.setText("Pertandingan");
 
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel5.setText("Seat");
 
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel6.setText("Kategori");
 
+        jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel7.setText("Member");
 
         cbMember.setText("Member (Diskon 10%)");
         cbMember.addActionListener(this::cbMemberActionPerformed);
 
+        jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel8.setText("Jumlah");
 
+        txtJumlah.addActionListener(this::txtJumlahActionPerformed);
+
+        btnProses.setFont(new java.awt.Font("Segoe UI", 2, 14)); // NOI18N
         btnProses.setText("PROSES");
         btnProses.addActionListener(this::btnProsesActionPerformed);
 
+        lblHasil.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         lblHasil.setText("Total Bayar : Rp.");
+
+        jTextArea1.setColumns(20);
+        jTextArea1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jTextArea1.setRows(5);
+        jTextArea1.setText("PEMBERITAHUAN\n\nLaga Big Match, Seat, dan Kategori terdapat\nperbedaan harga.");
+        jScrollPane2.setViewportView(jTextArea1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -113,87 +177,99 @@ public class Tugas1 extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(80, 80, 80)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel4)
+                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                            .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(29, 29, 29)
+                            .addComponent(rbVIP)
+                            .addGap(68, 68, 68)
+                            .addComponent(rbRegular))
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(txtNama, javax.swing.GroupLayout.PREFERRED_SIZE, 464, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(layout.createSequentialGroup()
                                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel8)
-                                .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 75, Short.MAX_VALUE))
-                            .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(44, 44, 44)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(cbSeat, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(cbMatch, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(cbMember, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(txtJumlah)
-                            .addComponent(txtAlamat)
-                            .addComponent(txtNama)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(rbVIP)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(rbRegular))))
-                    .addComponent(lblHasil, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(130, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addGap(121, 121, 121))
+                                    .addGap(122, 122, 122))
+                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(88, 88, 88)))
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(cbMember, javax.swing.GroupLayout.PREFERRED_SIZE, 433, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txtAlamat, javax.swing.GroupLayout.PREFERRED_SIZE, 464, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(cbMatch, javax.swing.GroupLayout.PREFERRED_SIZE, 311, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(cbSeat, javax.swing.GroupLayout.PREFERRED_SIZE, 311, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txtJumlah, javax.swing.GroupLayout.PREFERRED_SIZE, 460, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(16, 16, 16))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(253, 253, 253)
+                        .addGap(105, 105, 105)
+                        .addComponent(jLabel1))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(80, 80, 80)
+                        .addComponent(lblHasil, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(80, 80, 80)
+                        .addComponent(jLabel8))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(356, 356, 356)
                         .addComponent(btnProses))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(116, 116, 116)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 327, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(188, 188, 188)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 529, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
+            .addGroup(layout.createSequentialGroup()
+                .addGap(6, 6, 6)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtNama, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel3)
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel2)
-                            .addComponent(txtAlamat, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(27, 27, 27)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel4)
-                    .addComponent(cbMatch, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(19, 19, 19)
+                .addGap(3, 3, 3)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(cbSeat, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel3)
+                    .addComponent(txtNama, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(15, 15, 15)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(txtAlamat, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel4)
+                            .addComponent(cbMatch, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(31, 31, 31)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel5)
+                            .addComponent(cbSeat, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(17, 17, 17)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
                     .addComponent(rbVIP)
                     .addComponent(rbRegular))
-                .addGap(18, 18, 18)
+                .addGap(17, 17, 17)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel7)
-                    .addComponent(cbMember))
-                .addGap(18, 18, 18)
+                    .addComponent(cbMember)
+                    .addComponent(jLabel7))
+                .addGap(23, 23, 23)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel8)
                     .addComponent(txtJumlah, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(btnProses)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(3, 3, 3)
                 .addComponent(lblHasil)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(35, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         pack();
@@ -218,7 +294,22 @@ public class Tugas1 extends javax.swing.JFrame {
     private void cbMemberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbMemberActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_cbMemberActionPerformed
-
+    private void resetForm() {
+        txtNama.setText("");
+        txtAlamat.setText("");
+        txtJumlah.setText("");
+        
+        buttonGroup1.clearSelection();
+        cbMember.setSelected(false);
+        
+        cbMatch.setSelectedIndex(0);
+        cbSeat.setSelectedIndex(0);
+        
+        txtOutput.setText("");
+        lblHasil.setText("Total Bayar   : Rp. ");
+        
+        txtNama.requestFocus();
+    }
     private void btnProsesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProsesActionPerformed
         
         String nama = txtNama.getText();
@@ -226,8 +317,12 @@ public class Tugas1 extends javax.swing.JFrame {
         String match = cbMatch.getSelectedItem().toString();
         String seat = cbSeat.getSelectedItem().toString();
         
+        if (nama.isEmpty() || alamat.isEmpty()) {
+            javax.swing.JOptionPane.showMessageDialog(this, "Nama dan Alamat wajib diisi! ");
+            return;
+        }
         if (txtJumlah.getText().isEmpty()) {
-            javax.swing.JOptionPane.showMessageDialog(this, "Jumlah Tiket Harus Diisi!");
+            javax.swing.JOptionPane.showMessageDialog(this, "Jumlah Tiket Harus Diisi! ");
             return;
         }
         
@@ -238,44 +333,102 @@ public class Tugas1 extends javax.swing.JFrame {
             javax.swing.JOptionPane.showMessageDialog(this, "Jumlah Harus Angka!");
             return;
         }
-        int harga = 0;
-        String kategori = "";
         
+        if (jumlah > 5) {
+            javax.swing.JOptionPane.showMessageDialog(this, "Maksimal pembelian 5 tiket! ");
+            return;
+        }
+        
+        int stok = 100;
+        if (jumlah > stok) {
+            javax.swing.JOptionPane.showMessageDialog(this, "Stok tiket tidak cukup! ");
+            return;
+        }
+        
+        int harga = 0;
+        if (seat.contains("VIP")) {
+            harga = 700000;
+        } else if (seat.contains("Tribun Utara")) {
+            harga = 300000;
+        } else if (seat.contains("Tribun Selatan")) {
+            harga = 280000;
+        } else if (seat.contains("Tribun Supporter")) {
+            harga = 200000;
+        }
+        
+        String kategori = "";
         if (rbVIP.isSelected()) {
-            harga = 500000;
-            kategori = "VIP";
-            
+            harga += 100000;
+            kategori = "VIP";            
         } else if (rbRegular.isSelected()) {
-            harga = 250000;
             kategori = "Regular";
         } else {
             javax.swing.JOptionPane.showMessageDialog(this, "Pilih Kategori Tiket!");
             return;
         }
+        
+        boolean isBigMatch = false;
+        
+        if (match.contains("BIG MATCH")) {
+            isBigMatch = true;
+        }
+        
+        if (isBigMatch) {
+            harga += 50000;
+        }
+        
         int total = harga * jumlah;
         
         double diskon = 0;
         if (cbMember.isSelected()) {
-            diskon = total * 0.10;
+            diskon += total * 0.10;
         }
+        
         double totalBayar = total - diskon;
         
-        lblHasil.setText("Total Bayar : Rp " + totalBayar);
+        NumberFormat rupiah = NumberFormat.getCurrencyInstance(new Locale("id", "ID"));
         
-        txtOutput.setText(
+        String kode = "TRX" + System.currentTimeMillis();
+        String tanggal = java.time.LocalDate.now().toString();
+        
+        lblHasil.setText("Total Bayar : " + rupiah.format (totalBayar));
+        
+        txtOutput.setText(               
                 "==== STRUK PEMESANAN ====\n" +
-                "Nama       : " + nama + "\n" +
-                "Alamat     : " + alamat + "\n" +
-                "Match      : " + match + "\n" +
-                "Seat       : " + seat + "\n" +
-                "Kategori   : " + kategori + "\n" +
-                "Jumlah     : " + jumlah + "\n" +
+                "Kode Booking   : " + kode + "\n" +
+                "Tanggal        : " + tanggal + "\n" +       
+                "Nama           : " + nama + "\n" +
+                "Alamat         : " + alamat + "\n" +
+                "Match          : " + match + "\n" +
+                "Status Match   : " + (isBigMatch ? "BIG MATCH" : "Regular Match") + "\n" +      
+                "Seat           : " + seat + "\n" +
+                "Kategori       : " + kategori + "\n" +
+                "Jumlah         : " + jumlah + "\n" +
                 "----------------------------\n" +
-                "Total      : Rp " + total + "\n" +
-                "Diskon     : Rp " + diskon + "\n" +
-                "Bayar      : Rp " + totalBayar
+                "Harga/Tiket    : " + rupiah.format(harga) + "\n" +         
+                "Total          : " + rupiah.format(total) + "\n" +
+                "Diskon         : " + rupiah.format(diskon) + "\n" +
+                "----------------------------\n" +        
+                "Total Bayar    : " + rupiah.format(totalBayar)
         );
+        
+        
+        javax.swing.JOptionPane.showMessageDialog(this, "Pemesanan Berhasil");
+   
+        //resetForm();  Gunakan Method Reset Jika Ingin mereset struk pemesanan
     }//GEN-LAST:event_btnProsesActionPerformed
+
+    private void txtNamaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNamaActionPerformed
+        txtNama.setColumns(20);
+    }//GEN-LAST:event_txtNamaActionPerformed
+
+    private void txtJumlahActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtJumlahActionPerformed
+        txtJumlah.setColumns(10);
+    }//GEN-LAST:event_txtJumlahActionPerformed
+
+    private void txtAlamatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAlamatActionPerformed
+        txtAlamat.setColumns(20);
+    }//GEN-LAST:event_txtAlamatActionPerformed
 
     /**
      * @param args the command line arguments
@@ -330,7 +483,12 @@ public class Tugas1 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JLabel lblHasil;
     private javax.swing.JRadioButton rbRegular;
     private javax.swing.JRadioButton rbVIP;
