@@ -1,6 +1,6 @@
 package Latihan;
 
-//Menggunakan metode format number seperti angka, persen, dan mata uang
+//Menggunakan metode format number seperti angka, mata uang, dan persen.
 import java.text.*;
 
 
