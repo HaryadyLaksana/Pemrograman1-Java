@@ -11,8 +11,11 @@ Isi repository terdiri dari project tugas per pertemuan:
 * **P3_Haryady Laksana Putra**
 * **P4_Haryady Laksana Putra**
 * **P5_Haryady Laksana Putra**
+* **P6_Haryady Laksana Putra**
 * **P7_Haryady Laksana Putra**
 * **P8_Haryady Laksana Putra**
+* **P9_Haryady Laksana Putra**
+
 
 Setiap folder berisi source code Java yang mencakup:
 
@@ -42,27 +45,14 @@ Pemrograman1-Java/
 ├── P3_Haryady Laksana Putra/
 ├── P4_Haryady Laksana Putra/
 ├── P5_Haryady Laksana Putra/
+├── P6_Haryady Laksana Putra/
 ├── P7_Haryady Laksana Putra/
 ├── P8_Haryady Laksana Putra/
+├── P9_Haryady Laksana Putra/
 │
 ├── .gitignore
 └── README.md
 ```
-
-## ▶️ Cara Menjalankan Project
-
-### Clone repository:
-
-```bash
-git clone https://github.com/HaryadyLaksana/Pemrograman1-Java.git
-```
-
-### Jalankan di NetBeans:
-
-1. Buka Apache NetBeans
-2. Pilih **Open Project**
-3. Pilih folder project yang ingin dijalankan
-4. Run file utama Java
 
 ## 🎯 Tujuan Repository
 
