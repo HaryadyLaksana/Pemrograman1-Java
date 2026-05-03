@@ -6,15 +6,16 @@ Repository ini berisi kumpulan tugas praktikum mata kuliah **Pemrograman 1 Java*
 
 Isi repository terdiri dari project tugas per pertemuan:
 
-* **P1_Haryady Laksana Putra**
-* **P2_Haryady Laksana Putra**
-* **P3_Haryady Laksana Putra**
-* **P4_Haryady Laksana Putra**
-* **P5_Haryady Laksana Putra**
-* **P6_Haryady Laksana Putra**
-* **P7_Haryady Laksana Putra**
-* **P8_Haryady Laksana Putra**
-* **P9_Haryady Laksana Putra**
+* **P01_HaryadyLaksanaPutra**
+* **P02_HaryadyLaksanaPutra**
+* **P03_HaryadyLaksanaPutra**
+* **P04_HaryadyLaksanaPutra**
+* **P05_HaryadyLaksanaPutra**
+* **P06_HaryadyLaksanaPutra**
+* **P07_HaryadyLaksanaPutra**
+* **P08_HaryadyLaksanaPutra**
+* **P09_HaryadyLaksanaPutra**
+* **P10_HaryadyLaksanaPutra**
 
 
 Setiap folder berisi source code Java yang mencakup:
@@ -26,29 +27,34 @@ Setiap folder berisi source code Java yang mencakup:
 * Method
 * Array
 * OOP dasar
-* GUI Java Swing (jika ada)
+* GUI Java Swing
 * Tugas praktikum sesuai materi perkuliahan
+* Program Database (Java + MySQL / phpMyAdmin)
+
 
 ## 🛠️ Tools yang Digunakan
 
 * Java
 * Apache NetBeans IDE
 * JDK (Java Development Kit)
+* MySQL/phpMyAdmin
+* JDBC (Java Database Connectivity)
 
 ## 📂 Struktur Repository
 
 ```bash
 Pemrograman1-Java/
 │
-├── P1_Haryady Laksana Putra/
-├── P2_Haryady Laksana Putra/
-├── P3_Haryady Laksana Putra/
-├── P4_Haryady Laksana Putra/
-├── P5_Haryady Laksana Putra/
-├── P6_Haryady Laksana Putra/
-├── P7_Haryady Laksana Putra/
-├── P8_Haryady Laksana Putra/
-├── P9_Haryady Laksana Putra/
+├── P01_HaryadyLaksanaPutra/
+├── P02_HaryadyLaksanaPutra/
+├── P03_HaryadyLaksanaPutra/
+├── P04_HaryadyLaksanaPutra/
+├── P05_HaryadyLaksanaPutra/
+├── P06_HaryadyLaksanaPutra/
+├── P07_HaryadyLaksanaPutra/
+├── P08_HaryadyLaksanaPutra/
+├── P09_HaryadyLaksanaPutra/
+├── P10_HaryadyLaksanaPutra/
 │
 ├── .gitignore
 └── README.md
@@ -64,7 +70,7 @@ Pemrograman1-Java/
 ## 👨‍🎓 Author
 
 **Haryady Laksana Putra**
-Mahasiswa Teknik Informatika
+Mahasiswa Teknik Informatika Universitas Pamulang
 
 ## 📌 Catatan
 
